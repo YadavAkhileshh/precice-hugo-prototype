@@ -6,7 +6,7 @@ theme: github.com/google/docsy
 enableRobotsTXT: true
 
 params:
-  copyright: 'preCICE'
+  copyright: '© preCICE contributors. Licensed under LGPLv3.'
   description: 'The Coupling Library for Partitioned Multi-Physics Simulations'
 
   ui:
