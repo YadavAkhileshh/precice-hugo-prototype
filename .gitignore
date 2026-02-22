@@ -1,10 +1,11 @@
 # Hugo generated
 public/
-resources/_gen/
+resources/
 .hugo_build.lock
 
 # Dependencies
 node_modules/
+package-lock.json
 _vendor/
 
 # Pagefind (generated at build time)

@@ -1,13 +1,23 @@
 <!-- Pagefind Search -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>
-{{ $searchScript := `
-window.addEventListener('DOMContentLoaded', function() {
-if (typeof PagefindUI !== 'undefined') {
-new PagefindUI({
-element: '#search',
-showSubResults: true
-});
+<script>
+function initPagefind() {
+  console.log('initPagefind called, PagefindUI:', typeof PagefindUI);
+  console.log('search element:', document.getElementById('search'));
+  if (typeof PagefindUI !== 'undefined') {
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true
+    });
+    console.log('PagefindUI initialized');
+  } else {
+    console.error('PagefindUI is not defined');
+  }
 }
-});
-` }}
-<script>{ { $searchScript | safeJS } }</script>
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', initPagefind);
+} else {
+  initPagefind();
+}
+</script>
