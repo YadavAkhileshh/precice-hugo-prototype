@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npx hugo-extended --gc --minify"
+  command = "npm install && npx hugo-extended --gc --minify && npx pagefind --site public"
   publish = "public"
 
 [build.environment]
