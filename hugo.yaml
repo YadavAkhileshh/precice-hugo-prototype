@@ -1,0 +1,38 @@
+baseURL: 'https://precice-hugo-prototype.netlify.app/'
+languageCode: en-us
+title: 'preCICE'
+theme: github.com/google/docsy
+
+enableRobotsTXT: true
+
+params:
+  copyright: 'preCICE'
+  description: 'The Coupling Library for Partitioned Multi-Physics Simulations'
+
+  ui:
+    navbar_logo: true
+    navbar_translucent_over_cover_disable: true
+    sidebar_menu_compact: true
+    breadcrumb_disable: false
+    showLightDarkModeMenu: true
+
+  # Disable Docsy's built-in search (we use Pagefind instead)
+  gcs_engine_id: ""
+  offlineSearch: false
+
+  links:
+    user:
+      - name: GitHub
+        url: https://github.com/precice
+        icon: fab fa-github
+
+module:
+  proxy: direct
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

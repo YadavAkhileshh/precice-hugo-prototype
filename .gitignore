@@ -1,0 +1,20 @@
+# Hugo generated
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Dependencies
+node_modules/
+_vendor/
+
+# Pagefind (generated at build time)
+public/pagefind/
+static/pagefind/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

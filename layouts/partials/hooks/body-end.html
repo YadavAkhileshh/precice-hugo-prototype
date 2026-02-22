@@ -1,0 +1,13 @@
+<!-- Pagefind Search -->
+<script src="/pagefind/pagefind-ui.js"></script>
+{{ $searchScript := `
+window.addEventListener('DOMContentLoaded', function() {
+if (typeof PagefindUI !== 'undefined') {
+new PagefindUI({
+element: '#search',
+showSubResults: true
+});
+}
+});
+` }}
+<script>{ { $searchScript | safeJS } }</script>

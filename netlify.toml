@@ -1,0 +1,8 @@
+[build]
+  command = "npm install && hugo --minify && npx pagefind --site public"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.121.0"
+  HUGO_EXTENDED = "true"
+  NODE_VERSION = "18"

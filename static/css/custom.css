@@ -1,0 +1,251 @@
+/* preCICE Hugo Prototype — Custom CSS */
+
+/* ===== preCICE brand color ===== */
+:root {
+    --primary: #0A76BB;
+    --td-primary: #0A76BB;
+}
+
+/* ===== NAVBAR FIXES ===== */
+
+/* Hide the text-only site title next to the SVG logo */
+.td-navbar .navbar-brand__name {
+    display: none !important;
+}
+
+/* Fix navbar logo size */
+.td-navbar .navbar-brand img,
+.td-navbar .navbar-brand svg {
+    height: 40px;
+    width: auto;
+}
+
+/* Logo color for light mode */
+.td-navbar .navbar-brand__logo svg {
+    color: #040606;
+}
+
+/* Logo color for dark mode — white text */
+[data-bs-theme="dark"] .td-navbar .navbar-brand__logo svg,
+[data-bs-theme="dark"] .td-navbar .navbar-logo svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+/* ===== Hero section fixes ===== */
+.td-cover-block .td-cover-block__text-wrap {
+    text-align: center;
+    padding: 2rem;
+}
+
+.td-cover-block {
+    min-height: 80vh;
+}
+
+.td-cover-block .lead {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Feature cards equal height ===== */
+.td-box .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.td-box .col-md-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Section heading colors ===== */
+.td-box--dark h2,
+.td-box--dark .h2,
+.td-box--primary h2,
+.td-box--primary .h2 {
+    color: #fff;
+}
+
+/* ===== Search box ===== */
+#search {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* ===== Smooth transitions for dark mode ===== */
+body,
+.td-navbar,
+.td-sidebar,
+.td-content,
+footer,
+.td-box,
+.td-cover-block,
+code,
+pre,
+section,
+.card {
+    transition: background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* =============================================
+   DARK MODE — Full page coverage
+   Bootstrap 5 uses [data-bs-theme="dark"]
+   ============================================= */
+
+/* Body & HTML background */
+[data-bs-theme="dark"],
+[data-bs-theme="dark"] body {
+    background-color: #1a1a2e !important;
+    color: #e0e0e0 !important;
+}
+
+/* Navbar */
+[data-bs-theme="dark"] .td-navbar {
+    background-color: #0f0f1a !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ALL section boxes — FULL dark mode coverage ===== */
+[data-bs-theme="dark"] .td-box--white,
+[data-bs-theme="dark"] .td-box--light {
+    background-color: #1a1a2e !important;
+    color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] .td-box--dark {
+    background-color: #0f0f1a !important;
+    color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] .td-box--primary {
+    background-color: #0a3d62 !important;
+    color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] .td-cover-block {
+    background-color: #0f0f1a !important;
+}
+
+/* General section override */
+[data-bs-theme="dark"] section.td-box {
+    background-color: #16213e !important;
+    color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] section.td-box.td-box--dark {
+    background-color: #0f0f1a !important;
+}
+
+[data-bs-theme="dark"] section.td-box.td-box--primary {
+    background-color: #0a3d62 !important;
+}
+
+/* ===== Text colors in dark mode ===== */
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+    color: #f0f0f0 !important;
+}
+
+[data-bs-theme="dark"] p,
+[data-bs-theme="dark"] li,
+[data-bs-theme="dark"] span:not(.navbar-brand__name),
+[data-bs-theme="dark"] div:not(.td-navbar):not(.dropdown-menu) {
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    color: #5cb3e8 !important;
+}
+
+/* ===== Buttons in dark mode ===== */
+[data-bs-theme="dark"] .btn-primary {
+    background-color: #0A76BB !important;
+    border-color: #0A76BB !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .btn-secondary {
+    background-color: #333 !important;
+    border-color: #555 !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .btn-light {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: #fff !important;
+}
+
+/* ===== Code blocks ===== */
+[data-bs-theme="dark"] code {
+    background-color: #2d2d3f !important;
+    color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] pre {
+    background-color: #1e1e2e !important;
+    border: 1px solid #333 !important;
+}
+
+/* ===== Cards ===== */
+[data-bs-theme="dark"] .card {
+    background-color: #1e1e2e !important;
+    border-color: #333 !important;
+}
+
+/* ===== Sidebar ===== */
+[data-bs-theme="dark"] .td-sidebar,
+[data-bs-theme="dark"] .td-sidebar-nav {
+    background-color: #0f0f1a !important;
+    color: #ccc !important;
+}
+
+[data-bs-theme="dark"] .td-sidebar-link {
+    color: #bbb !important;
+}
+
+[data-bs-theme="dark"] .td-sidebar-link.active {
+    color: #5cb3e8 !important;
+    font-weight: 600;
+}
+
+/* ===== Footer ===== */
+[data-bs-theme="dark"] footer,
+[data-bs-theme="dark"] .td-footer {
+    background-color: #0f0f1a !important;
+    color: #999 !important;
+}
+
+/* ===== Breadcrumb ===== */
+[data-bs-theme="dark"] .breadcrumb {
+    background-color: #16213e !important;
+}
+
+/* ===== Feature icons in dark mode ===== */
+[data-bs-theme="dark"] .td-box .fa,
+[data-bs-theme="dark"] .td-box .fas,
+[data-bs-theme="dark"] .td-box .fab {
+    color: #5cb3e8 !important;
+}
+
+/* ===== Pagefind search dark mode ===== */
+[data-bs-theme="dark"] .pagefind-ui {
+    --pagefind-ui-primary: #5cb3e8;
+    --pagefind-ui-text: #e0e0e0;
+    --pagefind-ui-background: #1e1e2e;
+    --pagefind-ui-border: #333;
+    --pagefind-ui-tag: #2d2d3f;
+}
